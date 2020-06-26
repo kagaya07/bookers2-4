@@ -29,7 +29,7 @@
 					<th><p><%= @books.user.introduction %></p></th>
 				</tr>
 				<tr>
-					<th><label>フォローボタン</label></th>
+					<th><%= render 'relationships/follow_button', user: @books.user %></th>
 				</tr>
 			</table>
 			<% if @books.user.id == current_user.id %>
