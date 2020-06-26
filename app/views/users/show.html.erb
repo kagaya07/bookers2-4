@@ -32,11 +32,11 @@
 						</tr>
 						<tr>
 							<th><label>follows</label></th>
-							<td><%= @user.followings.count %></td>
+							<td><a href="<%= followings_user_path(@user) %>"><%= @user.followings.count %></a></td>
 						</tr>
 						<tr>
 							<th><label>followers</label></th>
-							<td><%= @user.followers.count %></td>
+							<td><a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %></a></td>
 						</tr>
 					</tbody>
 				</table>

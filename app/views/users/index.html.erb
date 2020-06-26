@@ -25,11 +25,15 @@
 					</tr>
 					<tr>
 						<th><label>follows</label></th>
-						<td><%= current_user.followings.count %></td>
+						<td>
+							<a href="<%= followings_user_path(current_user) %>"><%= current_user.followings.count %></a>
+						</td>
 					</tr>
 					<tr>
 						<th><label>followers</label></th>
-						<td><%= current_user.followers.count %></td>
+						<td>
+							<a href="<%= followers_user_path(current_user) %>"><%= current_user.followers.count %></a>
+						</td>
 					</tr>
 				</tbody>
 			</table>
@@ -76,7 +80,9 @@
 						</td>
 						<td>フォロー数:<%= user.followings.count %></td>
 						<td>フォロワー数:<%= user.followers.count %></td>
-						<td><%= render 'relationships/follow_button', user: user %></td>
+						<td>
+							<%= render 'relationships/follow_button', user: user %>
+						</td>
 						<td>
 							<%= link_to "Show", user_path(user) %>
 						</td>
